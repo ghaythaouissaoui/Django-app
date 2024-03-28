@@ -1,0 +1,60 @@
+.user_card {
+    height: 400px;
+    width: 400px;
+    margin-top: 40px;
+    background: linear-gradient(to right, #FFFF, #ffff); /* Dégradé de bleu à blanc pour le formulaire */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow:  0 5px 25px rgba(0, 0, 50, 0.05);
+}
+
+.form_container {
+    margin-top: 20px;
+}
+
+#form-title{
+    color: #0d0c0c;
+    text-align: center;
+
+    font-size: 20px;
+
+}
+.login_btn {
+    width: 100%;
+    background: #042e56 !important;
+    color: white !important;
+}
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.login_container {
+    padding: 0 2rem;
+}
+.input-group-text {
+    background: #cdc9c9 !important;
+    color: rgb(21, 20, 20) !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.btn {
+    
+    background-color: #dcdbdb;
+}
+.create{
+   
+    background-color:  #dcdbdb;
+}
+.modal-title{
+    color: black;
+}
+

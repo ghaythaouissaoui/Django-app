@@ -1,0 +1,74 @@
+body {
+    background-color: #EBF7FF; /* Arrière-plan blanc pour la page */
+    font-family: Arial, sans-serif; /* Police de caractères par défaut */
+}
+
+.user_card {
+    height: 500px;
+    width: 400px;
+    margin-top: 40px;
+    background: linear-gradient(to right, #FFFF, #ffff); /* Dégradé de bleu à blanc pour le formulaire */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow:  0 5px 25px rgba(0, 0, 50, 0.05);
+}
+
+#form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #101011; /* Couleur de texte */
+    font-size: 40px;
+
+}
+
+
+
+.input-group-text {
+    
+    color: #161616; /* Couleur du texte */
+    
+}
+.input-group{
+    border: none;
+    
+    width: 300px;
+    
+}
+
+.login_btn {
+    width: 150px;
+    background-color: #042e5c; /* Fond bleu pour le bouton */
+    color: #fff; /* Couleur du texte */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.login_btn:hover {
+    background-color: #155290; /* Légère variation de couleur lors du survol */
+}
+
+#messages {
+    text-align: center;
+    color: red; /* Couleur du texte */
+    margin-top: 10px;
+}
+
+.company_logo {
+    width: 120px; /* Ajustez la largeur selon vos besoins */
+    height: 120px; /* Hauteur automatique pour conserver les proportions */
+    margin-right: 50px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    border-radius: 100%;
+    margin-top: -100px;
+    
+     /* Marge à droite pour séparer l'image du titre */
+}
+
