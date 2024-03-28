@@ -8,7 +8,7 @@ def unauthenticated_user(view_func):
             if request.user.groups.filter(name='directeur').exists():
                 return redirect('base_user')
             elif request.user.groups.filter(name='admin').exists():
-                return redirect('base_admin')
+                return redirect('base') #routing error was do to this redirect call. the  value was base_admin instead of base
         else:
             return view_func(request, *args, **kwargs)
     return wrapper_func

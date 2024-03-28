@@ -3,7 +3,9 @@
 
 {% block content %}
 <!-- Bootstrap CSS -->
+<!--had to remove this link to deal  with the css bug
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+-->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 <!-- Bootstrap JS -->
@@ -14,13 +16,23 @@
 <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link href="{% static 'css/register.css' %}" rel="stylesheet">
-
+<script>
+    function confirmDelete(userId) {
+        if (confirm("Are you sure you want to delete this user?")) {
+            // If the user confirms, submit the form
+            document.getElementById('deleteForm').submit();
+        } else {
+            // If the user cancels, do nothing
+        }
+        console.log('test')
+    }
+</script>
 <!-- Table and Button -->
 <div class="col-md-11">
     <hr>
     <div class="card card-body">
         <!-- Button to trigger modal -->
-        <button type="button" class="create btn-primary btn-sm btn-block" data-toggle="modal" data-target="#registerModal">
+        <button type="button" class="btn-primary btn-sm btn-block" data-toggle="modal" data-target="#registerModal">
             Create User
         </button>
         <!-- Table -->
@@ -38,26 +50,17 @@
 				
 				<td>
 					<!-- Add a data-toggle and data-target attribute to trigger the modal -->
-					<a class="btn btn-sm btn-info btn-block" href="{% url 'update_user' user_id=user.id  %}" data-toggle="modal" data-target="#updateModal">Update</a>
+					<a class=" btn-sm btn-info btn-block" href="{% url 'update_user' user_id=user.id  %}" data-toggle="modal" data-target="#updateModal">Update</a>
 				</td>
 				<td>
-					<form method="POST" action="{% url 'delete_user' user.id %}" id="deleteForm{{ user.id }}">
+					<form method="POST" action="{% url 'delete_user' user.id %}" id="deleteForm">
 						{% csrf_token %}
-						<button type="button" class="btn btn-sm btn-danger btn-block " onclick="confirmDelete({{ user.id }})">Delete</button>
+						<button type="button" class=" btn-sm btn-danger btn-block " onclick="confirmDelete()">Delete</button>
 					</form>
 				</td>
             </tr>
             {% endfor %}
-			<script>
-				function confirmDelete(userId) {
-					if (confirm("Are you sure you want to delete this user?")) {
-						// If the user confirms, submit the form
-						document.getElementById('deleteForm' + userId).submit();
-					} else {
-						// If the user cancels, do nothing
-					}
-				}
-			</script>
+			
         </table>
     </div>
 </div>

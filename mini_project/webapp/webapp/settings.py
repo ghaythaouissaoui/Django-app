@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'webapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "postgres",
@@ -87,8 +87,14 @@ DATABASES = {
         "HOST": "127.0.0.1",
         "PORT": "5432",
     }
-}
+}"""
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -139,8 +145,9 @@ MESSAGE_TAGS={
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.example.com'  # Replace with your SMTP server hostname
+EMAIL_HOST = 'smtp.gmail.com'  # Replace with your SMTP server hostname
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'aouissaouighayth@gmail.com'
-EMAIL_HOST_PASSWORD = 'Viper11A'
+EMAIL_HOST_USER = 'djangomailer040@gmail.com'
+EMAIL_HOST_PASSWORD = 'byck rcot blij hstz'
+

@@ -83,6 +83,7 @@ def loginPage(request):
        
     context={}
     return render(request,'authentication/login.html', context)
+
 @login_required
 def home(request):
     if request.user.groups.filter(name='directeur').exists():
